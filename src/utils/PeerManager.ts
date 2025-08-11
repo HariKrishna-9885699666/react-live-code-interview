@@ -12,9 +12,10 @@ export class PeerManager {
     this.sessionId = sessionId;
     this.onCodeReceived = onCodeReceived;
     this.peer = new Peer(sessionId, {
-      host: 'localhost',
+      host: 'react-live-code-interview.netlify.app',
       port: 9000,
       path: '/myapp',
+      secure: true,
       debug: 2
     });
     this.peer.on('connection', (conn: DataConnection) => {
